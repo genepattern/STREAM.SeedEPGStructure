@@ -1,0 +1,1 @@
+docker run  -v ${PWD}:$PWD -w $PWD/job_1 genepattern/stream_structure python /stream/structure_command_line.py -m $PWD/test/data/dimred_stream_result.pkl -of val_ -nb_pct 0.1  -fig_name 'Seeded'  -fig_width 10 -fig_height 7 -fig_legend_ncol 3 -comp1 0 -comp2 1 -n_comp 3 -clustering 'kmeans' -max_n_clusters 200 -pref_perc 50 -damping 0.75 -n_clusters 3 
