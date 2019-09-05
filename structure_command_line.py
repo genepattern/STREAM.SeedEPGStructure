@@ -71,8 +71,8 @@ def main():
     adata = st.read(file_name=args.input_filename, file_format='pkl', experiment='rna-seq', workdir=workdir)
 
     st.seed_elastic_principal_graph(adata, clustering=args.clustering, n_clusters=args.n_clusters, damping=args.damping, pref_perc=args.pref_perc,  max_n_clusters=args.max_n_clusters, nb_pct=args.nb_pct)
-    st.plot_branches(adata, n_components=args.n_comp, comp1=args.comp1, comp2=args.comp2, save_fig=True, fig_name=(args.output_filename_prefix +'branches.png'), fig_path=None,fig_size=(args.fig_width, args.fig_height))
-    st.plot_branches_with_cells(adata,n_components=args.n_comp,comp1=args.comp1,comp2=args.comp2, save_fig=True,fig_name=(args.output_filename_prefix +'branches_with_cells.png'),fig_path=None,fig_size=(args.fig_width, args.fig_height),fig_legend_ncol=args.fig_legend_ncol)
+    st.plot_branches(adata, n_components=args.n_comp, comp1=args.comp1, comp2=args.comp2, save_fig=True, fig_name=(args.output_filename_prefix +'_branches.png'), fig_path=None,fig_size=(args.fig_width, args.fig_height))
+    st.plot_branches_with_cells(adata,n_components=args.n_comp,comp1=args.comp1,comp2=args.comp2, save_fig=True,fig_name=(args.output_filename_prefix +'_branches_with_cells.png'),fig_path=None,fig_size=(args.fig_width, args.fig_height),fig_legend_ncol=args.fig_legend_ncol)
 
     st.write(adata,file_name=(args.output_filename_prefix + '_stream_result.pkl'),file_path='./',file_format='pkl') 
 
