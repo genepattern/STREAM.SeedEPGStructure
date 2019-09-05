@@ -6,7 +6,7 @@ LSID=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00398:99
 author=Ted Liefeld, UCSD School of Medicine.
 categories=SingleCell
 
-commandLine=python /stream/structure_command_line.py -m <data.file> -of <output.filename> -fig_name <figure.name> <percent.neighbor.cells> <figure.width> <figure.height> <figure.legend.num.columns> <n_clusters> <damping> <pref_perc> <max_n_clusters> <clustering> <comp1> <comp2> <n_comp>
+commandLine=python /stream/structure_command_line.py -m <data.file> -of <output.filename> <percent.neighbor.cells> <figure.width> <figure.height> <figure.legend.num.columns> <n_clusters> <damping> <pref_perc> <max_n_clusters> <clustering> <comp1> <comp2> <n_comp>
 
 cpuType=any
 description=Seeding the initial elastic principal graph prior to starting the trajectory learning process.
@@ -35,16 +35,16 @@ p1_type=java.io.File
 p1_value=
 
 p2_MODE=
-p2_TYPE=CHOICE
-p2_default_value=<output.filename>_seeded_
-p2_description=The name prefix for the  output files.
+p2_TYPE=TEXT
+p2_default_value=3
+p2_description=Number of components to be plotted.
 p2_fileFormat=
 p2_flag=
-p2_name=figure.name
+p2_name=n_comp
 p2_numValues=1..1
 p2_optional=
 p2_prefix=
-p2_prefix_when_specified=
+p2_prefix_when_specified=-n_comp   
 p2_type=java.lang.String
 p2_value=
 
@@ -214,20 +214,6 @@ p14_prefix=
 p14_prefix_when_specified=-comp2  
 p14_type=java.lang.String
 p14_value=
-
-p15_MODE=
-p15_TYPE=TEXT
-p15_default_value=3
-p15_description=Number of components to be plotted.
-p15_fileFormat=
-p15_flag=
-p15_name=n_comp
-p15_numValues=1..1
-p15_optional=
-p15_prefix=
-p15_prefix_when_specified=-n_comp 
-p15_type=java.lang.String
-p15_value=
 
 
 privacy=public
