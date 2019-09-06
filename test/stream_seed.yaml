@@ -10,4 +10,5 @@ assertions:
     jobStatus: success
     files:
         "test_stream_result.pkl":  !!null
-
+        "test_branches.png": !!null
+        "test_branches_with_cells.png": !!null
