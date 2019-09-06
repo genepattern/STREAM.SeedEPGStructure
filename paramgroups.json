@@ -3,10 +3,10 @@
   "parameters": ["data.file", "output.filename" ]},
 
 {"name": "Structure Learning",
-  "parameters": ["percent.neighbor.cells", "n_clusters","damping","pref_perc","max_n_clusters","clustering"] },
+  "parameters": ["percent.neighbor.cells", "num.clusters","damping","preference.percentile","max.clusters","clustering"] },
 
 {"name": "Plotting", "hidden": false,
-  "parameters": ["n_comp", "comp1", "comp2", "figure.width", "figure.height", "figure.legend.num.columns"]}
+  "parameters": ["num.components", "comp1", "comp2", "figure.width", "figure.height", "figure.legend.num.columns"]}
 
 ]
 
