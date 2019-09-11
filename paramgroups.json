@@ -6,7 +6,7 @@
   "parameters": ["percent.neighbor.cells", "num.clusters","damping","preference.percentile","max.clusters","clustering"] },
 
 {"name": "Plotting", "hidden": false,
-  "parameters": ["num.components", "comp1", "comp2", "figure.width", "figure.height", "figure.legend.num.columns"]}
+  "parameters": ["num.components", "component.x", "component.y", "figure.width", "figure.height", "figure.legend.num.columns"]}
 
 ]
 
