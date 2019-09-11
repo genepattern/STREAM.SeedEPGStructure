@@ -6,7 +6,7 @@ LSID=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00398:99
 author=Ted Liefeld, UCSD School of Medicine.
 categories=SingleCell
 
-commandLine=python /stream/structure_command_line.py -m <data.file> -of <output.filename> <percent.neighbor.cells> <figure.width> <figure.height> <figure.legend.num.columns> <num.clusters> <damping> <preference.percentile> <max.clusters> <clustering> <comp1> <comp2> <num.components>
+commandLine=python /stream/structure_command_line.py -m <data.file> -of <output.filename> <percent.neighbor.cells> <figure.width> <figure.height> <figure.legend.num.columns> <num.clusters> <damping> <preference.percentile> <max.clusters> <clustering> <component.x> <component.y> <num.components>
 
 cpuType=any
 description=Seeding the initial elastic principal graph prior to starting the trajectory learning process.
@@ -193,7 +193,7 @@ p13_default_value=0
 p13_description=Component used for x axis.
 p13_fileFormat=
 p13_flag=
-p13_name=comp1
+p13_name=component.x
 p13_numValues=1..1
 p13_optional=
 p13_prefix=
@@ -207,7 +207,7 @@ p14_default_value=1
 p14_description=Component used for y axis.
 p14_fileFormat=
 p14_flag=
-p14_name=comp2
+p14_name=component.y
 p14_numValues=1..1
 p14_optional=
 p14_prefix=
