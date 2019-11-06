@@ -48,20 +48,19 @@
 
 <p>STREAM.SeedEPGStructure is use to seed the initial elastic principal graph prior to starting the trajectory learning process.	</p>
 
-<p><h5>Huidong to add detail explaining this part of the STREAM pipeline</h5></p>
-
-<p>&nbsp;</p>
 
 <h2>Algorithm</h2>
 <p>
-<h5>Huidong to cover details of this portion of the analysis</h5>
+Elastic principal graphs are structured data approximators, consisting of vertices connected by edges. The vertices are embedded into the space of the data, minimizing the mean squared distance (MSD) to the data points, similarly to k-means. Unlike unstructured k-means, the edges connecting the vertices are used to define an elastic energy term. The elastic energy term and MSD are used to create penalties for edge stretching and bending of branches.
 </p>
+<p>The principal graph inference is based on a greedy optimization procedure that may lead to local minima, therefore in STREAM we use the STREAM.SeedEPGStructure module as an initialization procedure that improves the quality of the inferred solutions and speeds up convergence. First, cells are clustered in the low-dimensional space (by default, k-means is used. Alternatively another two clustering methods including affinity propagation(ap) and spectral clustering(sc) are also available). Based on the centroids obtained, a minimum spanning tree (MST) is constructed using the Kruskal’s algorithm. The obtained tree is then used as initial tree structure for the ElPiGraph procedure.
+</p>
+
 
 <h2>References</h2>
 <p>H Chen, L Albergante, JY Hsu, CA Lareau, GL Bosco, J Guan, S Zhou, AN Gorban, DE Bauer, MJ Aryee, DM Langenau, A Zinovyev, JD Buenrostro, GC Yuan, L Pinello&nbsp;<a href="https://www.nature.com/articles/s41467-019-09670-4">Single-cell trajectories reconstruction, exploration and mapping of omics data with STREAM. </a> Nature Communications, volume 10, Article number: 1903 (2019)</p>
 <p>Nestorowa, S. et al.<a href="https://www.ncbi.nlm.nih.gov/pubmed/27365425"> A single-cell resolution map of mouse hematopoietic stem and progenitor cell differentiation</a>. Blood 128, e20-31 (2016).</p>
 <p>Pinello Lab &nbsp; <a href="https://github.com/pinellolab/STREAM">STREAM Github Repository</a></p>
-<p><b>ADD GPNB NOTEBOOK HERE WHEN READY</b></p>
 
 <h2>Input Files</h2>
 
@@ -123,7 +122,7 @@ Ref: Nestorowa, S. et al. <a href="https://www.ncbi.nlm.nih.gov/pubmed/27365425"
 		</tr>
                 <tr>
                         <td>num clusters*   </td>
-                        <td>Number of clusters (only valid once 'clustering' is specificed as 'sc' or 'kmeans').   </td>
+                        <td>Number of clusters (only valid once 'clustering' is specificed as 'Spectral Clustering' or 'K-Means').   </td>
                 </tr>
                  <tr>
                         <td>damping*   </td>
@@ -135,11 +134,11 @@ Ref: Nestorowa, S. et al. <a href="https://www.ncbi.nlm.nih.gov/pubmed/27365425"
                 </tr>
                  <tr>
                         <td> max clusters*  </td>
-                        <td> 	Number of clusters (only valid once 'clustering' is specificed as 'sc' or 'kmeans').  </td>
+                        <td> 	Number of clusters (only valid once 'clustering' is specificed as 'Spectral Clustering' or 'K-Means').  </td>
                 </tr>
                  <tr>
                         <td> clustering*  </td>
-                        <td> Clustering method used to infer the initial nodes. Choose from affinity propagation, K-Means clustering, spectral clustering  </td>
+                        <td> Clustering method used to infer the initial nodes. Choose from affinity propagation, K-Means clustering, Spectral Clustering  </td>
                 </tr>
       
                 <tr>
